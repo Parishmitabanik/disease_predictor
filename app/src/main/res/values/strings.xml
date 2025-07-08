@@ -1,0 +1,14 @@
+<resources>
+
+        <string name="app_name">Disease Predictor</string>
+
+        <string name="diabetes">Diabetes</string>
+        <string name="breast_cancer">Breast Cancer</string>
+        <string name="heart_disease">Heart disease</string>
+        <string-array name="disease_options">
+            <item>Diabetes</item>
+            <item>Breast Cancer</item>
+            <item>Heart disease</item>
+        </string-array>
+    </resources>
+

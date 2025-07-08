@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Disease Selection -->
+        <Spinner
+            android:id="@+id/disease_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/disease_options"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Diabetes Input Layout -->
+        <LinearLayout
+            android:id="@+id/diabetes_input_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText android:id="@+id/input_pregnancies" android:hint="Pregnancies" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/input_glucose" android:hint="Glucose" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/input_bp" android:hint="Blood Pressure" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/input_skin" android:hint="Skin Thickness" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/input_insulin" android:hint="Insulin" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/input_bmi" android:hint="BMI" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/input_dpf" android:hint="Diabetes Pedigree Function" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/input_age" android:hint="Age" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Breast Cancer Input Layout -->
+        <LinearLayout
+            android:id="@+id/cancer_input_layout"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Step 1 -->
+            <LinearLayout
+                android:id="@+id/cancer_step1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText android:id="@+id/input_radius_mean" android:hint="Radius Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_texture_mean" android:hint="Texture Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_perimeter_mean" android:hint="Perimeter Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_area_mean" android:hint="Area Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_smoothness_mean" android:hint="Smoothness Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_compactness_mean" android:hint="Compactness Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_concavity_mean" android:hint="Concavity Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_concave_points_mean" android:hint="Concave Points Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_symmetry_mean" android:hint="Symmetry Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_fractal_dimension_mean" android:hint="Fractal Dimension Mean" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Step 2 -->
+            <LinearLayout
+                android:id="@+id/cancer_step2"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText android:id="@+id/input_radius_se" android:hint="Radius SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_texture_se" android:hint="Texture SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_perimeter_se" android:hint="Perimeter SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_area_se" android:hint="Area SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_smoothness_se" android:hint="Smoothness SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_compactness_se" android:hint="Compactness SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_concavity_se" android:hint="Concavity SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_concave_points_se" android:hint="Concave Points SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_symmetry_se" android:hint="Symmetry SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_fractal_dimension_se" android:hint="Fractal Dimension SE" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+                <!-- 10 SE fields -->
+                <!-- You can continue adding these based on your variable naming -->
+            </LinearLayout>
+
+            <!-- Step 3 -->
+            <LinearLayout
+                android:id="@+id/cancer_step3"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText android:id="@+id/input_radius_worst" android:hint="Radius Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_texture_worst" android:hint="Texture Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_perimeter_worst" android:hint="Perimeter Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_area_worst" android:hint="Area Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_smoothness_worst" android:hint="Smoothness Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_compactness_worst" android:hint="Compactness Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_concavity_worst" android:hint="Concavity Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_concave_points_worst" android:hint="Concave Points Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_symmetry_worst" android:hint="Symmetry Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText android:id="@+id/input_fractal_dimension_worst" android:hint="Fractal Dimension Worst" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+                <!-- 10 Worst fields -->
+                <!-- You can continue adding these based on your variable naming -->
+            </LinearLayout>
+
+            <!-- Navigation Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btn_prev_step"
+                    android:text="Previous"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_next_step"
+                    android:text="Next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/heart_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp">
+
+            <EditText android:id="@+id/input_age2" android:hint="Age" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_sex" android:hint="Sex (1=Male, 0=Female)" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_cp" android:hint="Chest Pain Type"  android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_trestbps" android:hint="Resting BP" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_chol" android:hint="Cholesterol" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_fbs" android:hint="Fasting Blood Sugar (>120=1)" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_restecg" android:hint="Rest ECG Result" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_thalach" android:hint="Max Heart Rate" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <EditText android:id="@+id/input_exang" android:hint="Exercise Angina (1=yes)" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_oldpeak" android:hint="Oldpeak (ST Depression)" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_slope" android:hint="Slope" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_ca" android:hint="CA (No. of Vessels)" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/input_thal" android:hint="Thalassemia (0/1/2/3)" android:inputType="numberDecimal" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Predict Button -->
+        <Button
+            android:id="@+id/btn_predict"
+            android:text="Predict"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_autofill"
+            android:text="Fill Sample Data"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Result Text -->
+        <TextView
+            android:id="@+id/text_result"
+            android:text="Result will appear here"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
